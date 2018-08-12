@@ -5,6 +5,7 @@ obj = $(src:.c=.o)
 dep = $(obj:.o=.d)
 
 CFLAGS = -Wall
+LDFLAGS = -lncurses
 
 clara: $(obj)
 	gcc -o $@ $^ $(LDFLAGS)
