@@ -1,0 +1,30 @@
+Clara:
+================
+
+Rough layout:
+
+UI(s) <-----> Clara core <-----> AI framework
+		   ^                    ^
+		   |                    |
+		   v                    v
+		  Board and game framework
+
+Main goal:
+Develop a strong checkers and chess AI that is self-taught as much as possible
+
+Eventual goal:
+Intuitive terminal (ncurses) UI
+Framework handling both checkers and chess games
+Optimized game and board logic
+Flexible AI framework
+Optimized Minimax/game tree logic
+Strong AI built with no teaching, relying only on ANNs, evolution, and unsupervised learning
+Solid core uniting it all together
+
+Present goals:
+
+Design, code, and test a framework for representing boards and getting legal moves and the like
+Design, code, and test a framework for representing games and handling game logic
+Design and code a very simple AI (probably making random moves) to test the game framework
+Design, code, and test a UI that allows the user to play against a simple AI
+
