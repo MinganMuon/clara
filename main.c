@@ -78,9 +78,14 @@ int main(int argc, char *argv[])
 	int tcoords[2] = {4,5};	printf("%d\n", coordsToPadded(tcoords));
 	int ycoords[2] = {2,3};	printf("%d\n", coordsToPadded(ycoords));
 	int ucoords[2] = {4,6};	printf("%d\n", coordsToPadded(ucoords));
+
+	int coords[2];
+	paddedToCoords(37, coords); printf("%d, %d\n", coords[0], coords[1]);
+	paddedToCoords(29, coords); printf("%d, %d\n", coords[0], coords[1]);
+	paddedToCoords(18, coords); printf("%d, %d\n", coords[0], coords[1]);
+	paddedToCoords(15, coords); printf("%d, %d\n", coords[0], coords[1]);
+	paddedToCoords(8, coords); printf("%d, %d\n", coords[0], coords[1]);
 	*/
-
-
 
 	return 0;
 }

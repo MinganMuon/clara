@@ -45,7 +45,34 @@ int paddedToCoords(int tile, int coords[2])
 	if (!isValidTile(tile))
 		return 0;
 
-	/* TODO: continue this function */
+	/* this is ugly but I can't think of a better way... */
+	if (tile < 9) {
+		coords[1] = 7;
+		coords[0] = (tile - 5)*2;
+	} else if (tile < 14) {
+		coords[1] = 6;
+		coords[0] = (tile - 10)*2 + 1;
+	} else if (tile < 18) {
+		coords[1] = 5;
+		coords[0] = (tile - 14)*2;
+	} else if (tile < 23) {
+		coords[1] = 4;
+		coords[0] = (tile - 19)*2 + 1;
+	} else if (tile < 27) {
+		coords[1] = 3;
+		coords[0] = (tile - 23)*2;
+	} else if (tile < 32) {
+		coords[1] = 2;
+		coords[0] = (tile - 28)*2 + 1;
+	} else if (tile < 36) {
+		coords[1] = 1;
+		coords[0] = (tile - 32)*2;
+	} else {
+		coords[1] = 0;
+		coords[0] = (tile - 37)*2 + 1;
+	}
+
+	return 1;
 }
 
 /*
