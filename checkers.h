@@ -38,8 +38,8 @@
 /* checkersboard.c */
 
 int isValidTile(int tile);
-int paddedToCoords(int tile, int coords[]);
-int coordsToPadded(int tile, int coords[]);
+int paddedToCoords(int tile, int coords[2]);
+int coordsToPadded(int coords[2]);
 
 
 /* checkersmoves.c */

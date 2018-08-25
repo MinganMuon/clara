@@ -69,6 +69,19 @@ int main(int argc, char *argv[])
 
 	endwin();
 
+	/* test code
+	int coords[2] = {0,1};	printf("%d\n", coordsToPadded(coords));
+	int qcoords[2] = {5,5};	printf("%d\n", coordsToPadded(qcoords));
+	int wcoords[2] = {4,3};	printf("%d\n", coordsToPadded(wcoords));
+	int ecoords[2] = {5,0};	printf("%d\n", coordsToPadded(ecoords));
+	int rcoords[2] = {7,5};	printf("%d\n", coordsToPadded(rcoords));
+	int tcoords[2] = {4,5};	printf("%d\n", coordsToPadded(tcoords));
+	int ycoords[2] = {2,3};	printf("%d\n", coordsToPadded(ycoords));
+	int ucoords[2] = {4,6};	printf("%d\n", coordsToPadded(ucoords));
+	*/
+
+
+
 	return 0;
 }
 

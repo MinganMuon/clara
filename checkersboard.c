@@ -40,7 +40,7 @@ int isValidTile(int tile)
  * Outputs 0 if tile is invalid, 1 otherwise.
  *
  */
-int paddedToCoords(int tile, int coords[])
+int paddedToCoords(int tile, int coords[2])
 {
 	if (!isValidTile(tile))
 		return 0;
@@ -59,8 +59,9 @@ int paddedToCoords(int tile, int coords[])
  * or -1 if coords doesn't describe a valid tile.
  *
  */
-int coordsToPadded(int tile, int coords[])
+int coordsToPadded(int coords[2])
 {
+	/* test for light squares (assuming pieces are on black squares) */
 	if (coords[0] % 2 == 0) {
 		if (coords[1] % 2 == 0) {
 			return -1;
@@ -70,7 +71,20 @@ int coordsToPadded(int tile, int coords[])
 			return -1;
 		}
 	}
+	
+	int tile = 0;
+	int rows = 8 - coords[1]; /* how many rows are we from the bottom? */
 
-	/* TODO: continue this function */
+	/* I just reasoned out these formulae using the board diagram in checkers.h */
+	if (coords[1] % 2 == 0) {
+		tile = rows*4 + rows/2;
+		tile += (coords[0]-1)/2 + 1;
+
+	} else {
+		tile = rows*4 + (rows-1)/2;
+		tile += (coords[0])/2 + 1;
+	}
+
+	return tile;
 }
 
