@@ -17,7 +17,7 @@ clara: $(obj)
 
 .PHONY: clean
 clean:
-	rm -f $(obj) clara
+	rm -f $(obj) clara 
 
 .PHONY: cleandep
 cleandep:

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <ncurses.h>
+#include "checkers.h"
 
 /* 
  * Draw the outline of the board.

@@ -28,3 +28,7 @@ Design, code, and test a framework for representing games and handling game logi
 Design and code a very simple AI (probably making random moves) to test the game framework
 Design, code, and test a UI that allows the user to play against a simple AI
 
+Subsystems:
+
+I'm organizing the code into independent subsystems, each with their own header file giving an external interface and link between the subsystem's c files.
+
