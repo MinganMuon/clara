@@ -7,6 +7,10 @@
 
 #include "checkers.h"
 
+/* starting board position, white starts */
+int startingboard[46] = {INVALID, INVALID, INVALID, INVALID, INVALID, WHITE, WHITE, WHITE, WHITE, INVALID, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, INVALID, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, INVALID, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, BLACK, INVALID, BLACK, BLACK, BLACK, BLACK, INVALID, INVALID, INVALID, INVALID, INVALID};
+
+
 /*
  * Determines if the tile in question is valid, i.e. on the board or not.
  * Requires tile to use the padded array representation (see checkers.h).
@@ -113,5 +117,36 @@ int coordsToPadded(int coords[2])
 	}
 
 	return tile;
+}
+
+/*
+ * Counts the pieces of type pieceType (see defines in checkers.h) on
+ * the board board[46].
+ *
+ * Returns the number of pieces.
+ *
+ */
+int countPieces(int board[46], int pieceType)
+{
+	int count = 0;
+
+	for (int i=0; i < 46; i++) {
+		if (board[i] == pieceType)
+			count++;
+	}
+
+	return count;
+}
+
+/*
+ * Copies one board into another.
+ *
+ */
+void boardCopy(int source[46], int dest[46])
+{
+	for (int i=0; i < 46; i++) {
+		dest[i] = source[i];
+	}
+	return;
 }
 

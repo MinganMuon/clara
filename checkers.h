@@ -34,12 +34,30 @@
 
 /* common data */
 
+#define WHITE 1
+#define BLACK -1
+#define WHITEKING 2
+#define BLACKKING -2
+#define EMPTY 0
+#define INVALID 23
+
+struct cgame {
+	int board[46];
+	int turn; /* WHITE (1) or BLACK (-1) */
+	int turnsNoCapture; /* how many turns have elapsed since the last capture? */
+};
+typedef struct cgame Cgame;
+
+
 
 /* checkersboard.c */
 
 int isValidTile(int tile);
 int paddedToCoords(int tile, int coords[2]);
 int coordsToPadded(int coords[2]);
+int countPieces(int board[46], int pieceType);
+extern int startingboard[46];
+void boardCopy(int source[46], int dest[46]);
 
 
 /* checkersmoves.c */
